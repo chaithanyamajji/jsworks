@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         div{
+            justify-content: center;
+            display: flex;
+            gap: 10%;
+            margin:200px 300px;
+            
+        }
+        button{
+            background-color:pink;
+            color: white;
+            justify-content: center;
+            text-align: center;
+            padding:20px;
+            font-size: 1.3rem;
+            border-radius: 7px;
+            border-color: black;
+        }
+       button:hover{
+        background-color:blue;
+        color: black;
+       }
+    </style>
+</head>
+<body>
+    <div>
+        <button onclick="redirectToAccount()">Back To Home</button>
+        <button onclick="redirectToDebit()">Re Debit Amount</button>
+      </div>
+      <script>
+          const pin = '6789';
+          let userpin = prompt("Enter PIN");
+          if (userpin !== pin) {
+              alert("Invalid PIN");
+          }
+          else {
+          let balance = 20000;
+          let X = +prompt("Enter Withdraw Amount");
+          if (X > balance) {
+              alert("insufficient funds");
+          }
+          else {
+              let res2 = balance - X;
+              alert(res2);
+          }
+          }
+          function redirectToAccount() {
+          window.location.href = "account.html";
+          }
+          function redirectToDebit() {
+          window.location.href = "debit.html";
+          }
+    </script>
+</body>
+</html>

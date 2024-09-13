@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>front page</title>
+    <style>
+        .transctions{
+            display: flex;
+            margin-left: 15%;
+            margin-top: 20%;
+            gap: 10px;
+        }
+        .account{
+            background-color: rgb(126, 92, 5);
+            width: 300px;
+            height: 200px;
+            border-radius: 10px;
+            
+        }
+        .credit{
+            background-color: rgb(126, 92, 5);
+            width: 300px;
+            height: 200px;
+            border-radius: 10px;
+        }
+        .debit{
+            background-color: rgb(126, 92, 5);
+            width: 300px;
+            height: 200px;
+            border-radius: 10px;
+        }
+        .btn{
+            margin-left: 60px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="transctions">
+        <div class="account">
+            <h2 style="margin-top: 50px;margin-left: 40px;"> Account Details</h2>
+            <button class="btn" onclick="account()"> Check Details</button>
+
+        </div>
+        <div class="credit">
+            <h2 style="margin-top: 50px;margin-left: 40px;"> Credit Details</h2>
+            <button class="btn" onclick="credit()"> Check Details</button>
+        </div>
+
+        <div class="debit">
+            <h2 style="margin-top: 50px;margin-left: 40px;"> Debit Details</h2>
+            <button class="btn" onclick="debit()"> Check Details</button>
+        </div>
+    </div>
+    <script> 
+        function account(){
+            const pin1="1234";
+            let userpin=prompt("enter the pin");
+            if(userpin === "")
+        {
+            alert("pin should not be empty");
+        }
+            else if(pin1=== userpin){
+                location.href='account.html';
+            }
+            else{
+                alert("incorrectpin");
+            }
+        }
+        function credit(){
+            const pin2="1234";
+            let userpin=prompt("enter the pin");
+            if(userpin === "")
+        {
+            alert("pin should not be empty");
+        }
+            else if(pin1=== userpin){
+                window.location.href='account.html';
+            }
+            else{
+                alert("incorrectpin");
+            }
+}
+function debit(){
+    const pin3="1234";
+            let userpin=prompt("enter the pin");
+            if(userpin === "")
+        {
+            alert("pin should not be empty");
+        }
+            else if(pin1=== userpin){
+                window.location.href='account.html';
+            }
+            else{
+                alert("incorrectpin");
+            }
+
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>credit amount</title>
+<style>
+    #btn{
+            justify-content: center;
+            display: flex;
+            gap: 10%;
+            margin:200px 300px;
+            
+        }
+        button{
+            background-color: rgb(255, 0, 157);
+            color: white;
+            justify-content: center;
+            text-align: center;
+            padding:20px;
+            font-size: 1.3rem;
+            border-radius: 7px;
+            border-color: black;
+        }
+       button:hover{
+        background-color:blue;
+        color: black;
+       }
+</style>
+</head>
+<body>
+    <div id="btn">
+        <button onclick="redirectToAccount()">Back To Home</button>
+        <button onclick="redirectToCreditAmount()">Re Credit Amount</button>
+     </div>
+     <script>
+         let balance=0;
+         let X = +prompt("Enter Deposite Amount")
+         let res1 = balance + X
+         alert=("Amount Credited Succesfully.")
+         function redirectToAccount() {
+         window.location.href = "account.html";
+         }
+         function redirectToCreditAmount() {
+         window.location.href = "credit.html";
+         }
+    </script>
+    
+</body>
+</html>

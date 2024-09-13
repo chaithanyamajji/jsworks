@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <style>
+    
+        body{
+            justify-content: center;
+            margin: 230px 0px;
+            margin-left:480px;
+        }
+       input{
+        width: 300px;
+        height: 30px;
+       }
+       #btn1{
+        background-color: rgb(92, 40, 214);
+        color: white;
+        justify-content: center;
+        padding:7px 128px;
+        font-size: 1.3rem;
+        border-style: none;
+        border-radius: 4px;
+       }
+       #btn2{
+        background-color: rgb(217, 15, 106);
+        color: white;
+        padding:7px 106px;
+        font-size: 1.3rem;
+        border-style: none;
+        border-radius: 4px;
+       }
+       #btn3{
+        background-color:goldenrod;
+        color: white;
+        padding:7px 90px;
+        font-size: 1.3rem;
+        border-style: none;
+        border-radius: 4px;
+       }
+       #btn1:hover{
+        background-color: bisque;
+        color: black;
+       }
+      #btn2:hover{
+        background-color: bisque;
+        color: black;
+       }
+       #btn3:hover{
+        background-color: bisque;
+        color: black;
+       }
+    </style>
+    
+</head>
+<body>
+    <form>
+        <input type="Password" id="text1" placeholder="Enter PIN here"><br><br>
+        <button id="btn1" onclick="pin()">Login</button><br><br>
+        <button id="btn2" onclick="window.location.href='forgotpin.html'">Forgot PIN</button><br><br>
+        <button id="btn3" button onclick="window.location.href='Acconut.html'">Back To Home</button>
+    </form>
+    <script>
+         function redirectToforgotpin() {
+                window.location.href = "forgotpin.html";
+            }
+        function pin() {
+        let pin = document.getElementById("text1").value;
+            if (!/^\d+$/.test(pin)) {
+                alert("Please enter numbers only.");
+                return;
+            }
+            if (pin.length !== 4) {
+                alert("PIN should be 4 digits long.");
+                return;
+            }
+            if (pin !== "6789") {
+                alert("Invalid PIN.");
+                return;
+            }
+           alert("Login Successful.");
+             window.location.href = "Account.html";
+        }
+    </script>
+    
+</body>
+</html>
